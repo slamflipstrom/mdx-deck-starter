@@ -1,0 +1,41 @@
+{
+  "name": "mdx-deck-starter",
+  "version": "1.0.0",
+  "description": "starter for spinning up a new mdx-deck slide deck",
+  "main": "index.js",
+  "scripts": {
+    "start": "mdx-deck deck.mdx",
+    "build": "npm run clean && npm run static && npm run build:no-html",
+    "build:no-html": "mdx-deck build deck.mdx --no-html",
+    "clean": "rm -rf dist",
+    "static": "mkdir -p dist/assets && cp -R assets dist/",
+    "html": "mdx-deck build deck.mdx -d dist",
+    "pdf": "mdx-deck pdf deck.mdx -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slamflipstrom/mdx-deck-starter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slamflipstrom/mdx-deck-starter/issues"
+  },
+  "homepage": "https://github.com/slamflipstrom/mdx-deck-starter#readme",
+  "devDependencies": {
+    "css-loader": "^4.0.0",
+    "mdx-deck": "^4.1.1",
+    "mdx-deck-code-surfer": "^0.5.5",
+    "node-sass": "^4.14.1",
+    "raw-loader": "^4.0.1",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^0.23.1",
+    "svg-react-loader": "^0.4.6",
+    "webpack": "^4.44.0"
+  },
+  "dependencies": {
+    "prism-react-renderer": "^1.1.1"
+  }
+}
