@@ -1,8 +1,7 @@
 import { Box } from 'theme-ui'
 import { Head, Image, Invert } from 'mdx-deck'
-// *CodeSurfer doesn't seem to work with newest verions of mdx-deck
-// import { CodeSurfer } from 'code-surfer'
-// import { nightOwl } from '@code-surfer/themes'
+import { CodeSurfer } from 'code-surfer'
+import { nightOwl } from '@code-surfer/themes'
 
 <Head>
   <title>11ty</title>
@@ -30,6 +29,18 @@ import { Head, Image, Invert } from 'mdx-deck'
 
 ## Code example
 
+<CodeSurfer
+  theme={nightOwl}
 >
 
+```js
+console.log()
+```
+
+</CodeSurfer>
+
 ---
+
+```
+
+```
